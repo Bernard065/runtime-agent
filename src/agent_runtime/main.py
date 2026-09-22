@@ -1,13 +1,13 @@
 """FastAPI application entrypoint."""
 
-from contextlib import asynccontextmanager
 from collections.abc import AsyncIterator
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from agent_runtime.core.config import settings
-from agent_runtime.core.logging import setup_logging, get_logger
+from agent_runtime.core.logging import get_logger, setup_logging
 from agent_runtime.core.telemetry import setup_telemetry
 
 logger = get_logger(__name__)
